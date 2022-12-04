@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { debounceTime } from 'rxjs/operators';
+import { GrammerCorrectionService } from '../grammer-correction.service';
 
 @Component({
   selector: 'app-grammer-correction',
@@ -9,10 +11,12 @@ export class GrammerCorrectionComponent {
 
 
 text:string;
+standartEnglishText:any;
 
-  constructor(){
+  constructor(private grammerCorrectionService: GrammerCorrectionService){
 
     this.text = "Write your english sentence in here"
+    this.standartEnglishText = "";
   }
 
 
@@ -22,9 +26,15 @@ text:string;
   }
 
   updateObj() {
-    console.log(this.text)
-    // also possible for a generic update:
-    // Object.keys(this.obj).forEach(k => { this.obj[k] = tempObj[k]; });
+      this.grammerCorrectionService.getCorrection(this.text).pipe(debounceTime(5000)).subscribe(
+        data => {
+            this.standartEnglishText = data;
+        }, error => {
+          alert(error.error.message);
+        }
+      )
   }
+
+ 
 
 }
