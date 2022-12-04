@@ -18,6 +18,8 @@ in main directory
 
 ### `node index.js` 
 
+### create .env and put your openai API key: OPENAI_API_KEY=123456
+
 Your node app now works at http://localhost:4011
 
 then,
