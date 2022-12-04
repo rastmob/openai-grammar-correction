@@ -12,7 +12,7 @@ Your node app now works at http://localhost:4011
 
 then,
 
-## `cd app`
+### `cd app`
 ## cd frontend
 ## cd openai-grammer-correction
 
