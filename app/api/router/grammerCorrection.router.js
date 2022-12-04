@@ -1,8 +1,8 @@
-import express from "express";
-const router = express.Router();
+var express = require("express");
+var router = express.Router();
 
-import controller from "../controller/grammerCorrection.controller";
+var controller = require('../controller/grammerCorrection.controller')
 
-router.post("/", controller.correction);
+router.get("/", controller.correction);
 
-export default router;
+module.exports = router;
