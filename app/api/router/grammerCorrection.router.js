@@ -3,6 +3,6 @@ var router = express.Router();
 
 var controller = require('../controller/grammerCorrection.controller')
 
-router.get("/", controller.correction);
+router.post("/", controller.correction);
 
 module.exports = router;
