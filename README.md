@@ -16,9 +16,9 @@ Run Nodejs app first, then run and browse Angular app.
 
 in main directory
 
-### `node index.js` 
-
 ### create .env and put your openai API key: OPENAI_API_KEY=123456
+
+### `node index.js` 
 
 Your node app now works at http://localhost:4011
 
