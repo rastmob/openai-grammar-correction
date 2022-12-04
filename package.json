@@ -12,19 +12,19 @@
   },
   "keywords": [
     "grammer",
-    "correction",
-    "fixer",
     "openai",
-    "nodejs"
+    "english",
+    "fixer",
+    "correction"
   ],
-  "author": "mobilerast@gmail.com",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "body-parser": "^1.19.0",
     "pm2": "^4.5.6"
   },
+  "author": "mobilerast@gmail.com",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/rastmob/openai-grammer-correction/issues"
   },
