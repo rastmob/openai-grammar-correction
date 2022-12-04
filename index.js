@@ -1,5 +1,9 @@
+const dotenv = require('dotenv')
+dotenv.config()
 var express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
+
 var app = express();
 const router = express.Router();
 const baseRoute = require('./app/api/router/route.manager')
@@ -14,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // parse application/json
 app.use(bodyParser.json())
+app.use(cors())
 
 
 baseRoute.routeManager(app, router);
