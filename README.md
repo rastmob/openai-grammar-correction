@@ -1,4 +1,4 @@
-# openai-grammer-correction
+# openai-grammar-correction
 English grammar fixer with the help of OpenAI: just paste your text and copy the grammar-fixed sentence.
 
 This project consists of 2 app project. 
