@@ -7,7 +7,7 @@ import { GrammerCorrectionService } from '../grammer-correction.service';
   templateUrl: './grammer-correction.component.html',
   styleUrls: ['./grammer-correction.component.css']
 })
-export class GrammerCorrectionComponent {
+export class GrammarCorrectionComponent {
 
 
 text:string;
