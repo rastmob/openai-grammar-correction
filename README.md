@@ -1,39 +1,51 @@
-# openai-grammar-correction
-English grammar fixer with the help of OpenAI: just paste your text and copy the grammar-fixed sentence.
+# OpenAI Grammar Corrector!
 
-This project consists of 2 app project. 
+This project helps you to correct your **English sentences to Standard English** with the help of **OpenAI API**. Paste your text, **AI will help you to perfect it**.
 
-1. Angular 15 app
-2. Nodejs app
+This project consists of 2 app project.
 
-Run Nodejs app first, then run and browse Angular app. 
+1.  **Angular15**
+2.  **Nodejs** 
+
+## Installation
+Follow below steps to make it run project in your environment;
+
+1. run `npm install` in the main directory
+2. visit openai.com and register
+3. get your API_KEY under account menu
+4. create `.env` in the main directory and paste your API key in it `OPENAI_API_KEY=$YOURAPIKEY`
+5. run **node index.js** in the main directory
+6. Now Nodejs backend are working!
+7. launch 2nd terminal and `cd app`
+8. `cd frontend`
+9. `cd openai-grammer-correction`
+10. `npm install`
+11. `ng serve`
+12. Now Angular App also running, visit http://localhost:4200 
 
 
-## Follow below commands
+## OpenAI Implementation
 
+Code below in grammerCorrection.controller.js helps us to correct our English sentences.
 
-### `npm install`
+    const  completion = await  openai.createCompletion({
+    model:  "text-davinci-003",
+    prompt:  `Correct this to standard English:\n\n${req.body.userText}.`,
+    temperature:  0,
+    max_tokens:  60,
+    top_p:  1.0,
+    frequency_penalty:  0.0,
+    presence_penalty:  0.0,
+    });
 
-in main directory
+## Contribution & Support
+Follow the Issue template for informing about the issues and for making contributions.
 
-### create .env and paste your openai API key: `OPENAI_API_KEY=123456`
+**Follow us:**
+https://twitter.com/rastmobile
+https://www.linkedin.com/company/rastmobile/
+https://www.behance.net/rastmobile 
 
-### `node index.js` 
-
-Your node app now works at http://localhost:4011
-
-then,
-
-### `cd app`
-### `cd frontend`
-### `cd openai-grammer-correction`
-
-then
-
-### `npm install`
-
-then
-
-### `ng serve`
-
-Open http://localhost:4200 on your browser and start to type your english!
+**Reach us:**
+contact@rastmobile.com
+mehmet.alp@rastmobile.com
