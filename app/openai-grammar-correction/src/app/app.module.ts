@@ -5,12 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GrammerCorrectionComponent } from './grammer-correction/grammer-correction.component';
+import { GrammarCorrectionComponent } from './grammar-correction/grammer-correction.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GrammerCorrectionComponent
+    GrammarCorrectionComponent
   ],
   imports: [
     BrowserModule,
