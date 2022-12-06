@@ -1,5 +1,5 @@
 {
-  "name": "openai-grammer-correction",
+  "name": "openai-grammar-correction",
   "version": "1.0.0",
   "description": "English grammar fixer with the help of OpenAI: just paste your text and copy the grammar-fixed sentence.",
   "main": "index.js",
@@ -8,14 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rastmob/openai-grammer-correction.git"
+    "url": "git+https://github.com/rastmob/openai-grammar-correction.git"
   },
   "keywords": [
     "grammer",
     "openai",
     "english",
     "fixer",
-    "correction"
+    "correction",
+    "ai",
+    "gpt",
+    "gpt3",
+    "nodejs",
+    "angular15",
+    "angular",
+    "javascript"
   ],
   "dependencies": {
     "express": "^4.17.1",
@@ -29,7 +36,7 @@
   "author": "mobilerast@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rastmob/openai-grammer-correction/issues"
+    "url": "https://github.com/rastmob/openai-grammar-correction/issues"
   },
-  "homepage": "https://github.com/rastmob/openai-grammer-correction#readme"
+  "homepage": "https://github.com/rastmob/openai-grammar-correction#readme"
 }

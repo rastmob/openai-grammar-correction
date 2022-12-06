@@ -6,10 +6,8 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 
-const  correction = async (req, res, next) => {
+const correction = async (req, res, next) => {
     try {
-        console.log(req.body)
-        console.log(req.body.userText)
         const completion = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: `Correct this to standard English:\n\n${req.body.userText}.`,
@@ -20,8 +18,8 @@ const  correction = async (req, res, next) => {
             presence_penalty: 0.0,
         });
         res.send({
-            "status"     : 200,
-            "message"    : completion.data.choices[0].text
+            "status": 200,
+            "message": completion.data.choices[0].text
         });
     } catch (error) {
         console.log("error", `Something happened! like: ${error}`);

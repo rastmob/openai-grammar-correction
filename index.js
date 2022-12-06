@@ -8,10 +8,7 @@ var app = express();
 const router = express.Router();
 const baseRoute = require('./app/api/router/route.manager')
 
-
-
 var port = process.env.PORT || 4011;
-
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -19,7 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parse application/json
 app.use(bodyParser.json())
 app.use(cors())
-
 
 baseRoute.routeManager(app, router);
 
