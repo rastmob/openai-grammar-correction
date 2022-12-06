@@ -8,7 +8,7 @@ This project consists of 2 app project.
 2.  **Nodejs** 
 
 ## Installation
-Follow below steps to make it run project in your environment;
+Follow the below steps to make it run the project in your environment;
 
 1. run `npm install` in the main directory
 2. visit openai.com and register
