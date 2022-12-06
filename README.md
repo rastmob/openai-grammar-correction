@@ -1,4 +1,4 @@
-# OpenAI Grammar Corrector!
+# OpenAI Grammar Corrector
 
 This project helps you to correct your **English sentences to Standard English** with the help of **OpenAI API**. Paste your text, **AI will help you to perfect it**.
 
@@ -43,9 +43,12 @@ Follow the Issue template for informing about the issues and for making contribu
 
 **Follow us:**
 https://twitter.com/rastmobile
+
 https://www.linkedin.com/company/rastmobile/
+
 https://www.behance.net/rastmobile 
 
 **Reach us:**
 contact@rastmobile.com
+
 mehmet.alp@rastmobile.com
