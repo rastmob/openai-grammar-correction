@@ -318,7 +318,34 @@
   border-radius:10px;
 
 }
+.nav-tabs {
+    display:none;
+}
 
+@media(min-width:768px) {
+    .nav-tabs {
+        display: flex;
+    }
+    
+    .card {
+        border: none;
+    }
+
+    .card .card-header {
+        display:none;
+    }  
+
+    .card .collapse{
+        display:block;
+    }
+}
+
+@media(max-width:767px){
+    .tab-content > .tab-pane {
+        display: block !important;
+        opacity: 1;
+    }
+}
 </style>
 <link
   rel="stylesheet"
@@ -343,5 +370,11 @@
 
 <div class="container mt-40">
   <app-grammer-correction></app-grammer-correction>
+
+  <div class="container">
+
+    <app-usertab></app-usertab>
+  </div>
+
   <router-outlet></router-outlet>
 </div>
