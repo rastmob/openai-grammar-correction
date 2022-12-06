@@ -336,3 +336,23 @@
         opacity: 1;
     }
 }
+
+
+  .twitter-share-button {
+    background-color: #1DA1F2;
+    color: #ffffff !important;
+    fill: #fff;
+    cursor: pointer;
+    border: none; 
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    display: block;
+    margin-right:20px;
+  }
+
+  .btn__icon * {
+    display: inline;
+    height: 1rem;
+    width: 1rem;
+  }
+  
