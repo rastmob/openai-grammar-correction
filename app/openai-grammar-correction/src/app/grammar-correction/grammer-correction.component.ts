@@ -15,7 +15,7 @@ standartEnglishText:any;
 
   constructor(private grammerCorrectionService: GrammerCorrectionService){
 
-    this.text = "Write your english sentence in here"
+    this.text = "Your English"
     this.standartEnglishText = "";
   }
 
