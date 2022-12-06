@@ -42,6 +42,7 @@ Code below in grammerCorrection.controller.js helps us to correct our English se
 Follow the Issue template for informing about the issues and for making contributions.
 
 **Follow us:**
+
 https://twitter.com/rastmobile
 
 https://www.linkedin.com/company/rastmobile/
@@ -49,6 +50,7 @@ https://www.linkedin.com/company/rastmobile/
 https://www.behance.net/rastmobile 
 
 **Reach us:**
+
 contact@rastmobile.com
 
 mehmet.alp@rastmobile.com
