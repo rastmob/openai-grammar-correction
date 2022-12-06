@@ -1,5 +1,7 @@
 # OpenAI Grammar Corrector
 
+![nodejs angular openai ai example project grammar gpt gpt3](https://raw.githubusercontent.com/rastmob/openai-grammar-correction/main/Grammar%20CorrectionOpenAINodejsAngular.png)
+
 This project helps you to correct your **English sentences to Standard English** with the help of **OpenAI API**. Paste your text, **AI will help you to perfect it**.
 
 This project consists of 2 app project.
