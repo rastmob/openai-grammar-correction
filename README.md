@@ -19,11 +19,10 @@ Follow the below steps to make it run the project in your environment;
 5. run **node index.js** in the main directory
 6. Now Nodejs backend are working!
 7. launch 2nd terminal and `cd app`
-8. `cd frontend`
-9. `cd openai-grammer-correction`
-10. `npm install`
-11. `ng serve`
-12. Now Angular App also running, visit http://localhost:4200 
+8. `cd openai-grammar-correction`
+9. `npm install`
+10. `ng serve`
+11. Now Angular App also running, visit http://localhost:4200 
 
 
 ## OpenAI Implementation
