@@ -1,4 +1,4 @@
-# OpenAI Grammar Corrector
+# OpenAI Grammar Corrector - OpenAI API
 
 ![nodejs angular openai ai example project grammar gpt gpt3](https://raw.githubusercontent.com/rastmob/openai-grammar-correction/main/Grammar%20CorrectionOpenAINodejsAngular.png)
 
