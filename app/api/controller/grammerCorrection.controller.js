@@ -5,7 +5,6 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-
 const correction = async (req, res, next) => {
     try {
         const completion = await openai.createCompletion({

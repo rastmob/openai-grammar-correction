@@ -16,4 +16,10 @@ export class GrammerCorrectionService {
         "userText": text
      });
   }
+
+  audioTranscibe(text:string){
+    return this.http.post(`${this.apiUrl}speechToText`, {
+      "userText": text
+   });
+}
 }

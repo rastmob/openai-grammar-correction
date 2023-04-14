@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { GrammarCorrectionComponent } from './grammar-correction/grammer-correction.component';
 import { UsertabComponent } from './usertab/usertab.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { SpeechToTextComponent } from './speech-to-text/speech-to-text.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GrammarCorrectionComponent,
-    UsertabComponent
+    UsertabComponent,
+    SpeechToTextComponent
   ],
   imports: [
     BrowserModule,
