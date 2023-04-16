@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { debounceTime } from 'rxjs/operators';
 import { GrammerCorrectionService } from '../grammer-correction.service';
 
 @Component({
   selector: 'app-grammer-correction',
   templateUrl: './grammer-correction.component.html',
-  styleUrls: ['./grammer-correction.component.css']
+  styleUrls: ['./grammer-correction.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class GrammarCorrectionComponent {
 
@@ -15,7 +16,7 @@ standartEnglishText:any;
 
   constructor(private grammerCorrectionService: GrammerCorrectionService){
 
-    this.text = "Write your english sentence in here"
+    this.text = ""
     this.standartEnglishText = "";
   }
 
