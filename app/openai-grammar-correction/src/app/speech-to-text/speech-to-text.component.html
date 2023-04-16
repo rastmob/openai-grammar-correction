@@ -1,7 +1,29 @@
-<h3>Speech to text  </h3>
-<p>Get Audio Transcript (Audio file statically served under public directory)</p>
+<h3>Speech to text</h3>
+<p>
+  Get Audio Transcript (Audio file statically served under public directory)
+</p>
 
 <div class="form-group">
-    <input type="submit" class="btn sbmt-btn" (click)="runAudioFile()" value="Click for Speech to Text">
-  </div>
-  {{standartEnglishText?.message}}
+  <input type="file" class="file-input"
+  (change)="onFileSelected($event)" #fileUpload>
+
+
+<div class="file-upload">
+
+  {{fileName || "No file uploaded yet."}}
+
+   <button mat-mini-fab color="primary" class="upload-btn"
+     (click)="fileUpload.click()">
+   </button>
+</div>
+</div>
+
+<div class="form-group">
+  <input
+    type="submit"
+    class="btn sbmt-btn"
+    (click)="runAudioFile()"
+    value="Click for Speech to Text"
+  />
+</div>
+{{ standartEnglishText?.message }}
