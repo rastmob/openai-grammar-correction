@@ -47,7 +47,6 @@ export class SpeechToTextComponent {
 
         this.grammerCorrectionService
         .uploadFile(formData)
-        .pipe(debounceTime(5000))
         .subscribe(
           (data) => {
             this.standartEnglishText = data;

@@ -1,8 +1,9 @@
 var express = require("express");
 var router = express.Router();
 
+const fileUpload = require("express-fileupload");
 var controller = require('../controller/speechToText.controller')
 
-router.post("/", controller.main);
+router.post("/",  fileUpload({ createParentPath: true }), controller.main);
 
 module.exports = router;

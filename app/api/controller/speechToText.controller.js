@@ -6,6 +6,7 @@ const { Readable } = require("stream");
 const ffmpegPath = require("@ffmpeg-installer/ffmpeg").path;
 const path = require('path');
 
+
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
@@ -46,29 +47,34 @@ function recordAudio(filename) {
 // Transcribe audio
 async function transcribeAudio(filename) {
 
-    console.log("transcribeAudio");
-   
-    console.log(filename);
+
     const transcript = await openai.createTranscription(
         fs.createReadStream(filename),
         "whisper-1"
     );
 
-    console.log(transcript);
     return transcript.data.text;
 }
 
 // Main function
 async function main(req, res, next) {
     try {
-        const audioFilename = "audio_audio.mp3";
-        const coolPath = path.join('public', audioFilename);
-         console.log(audioFilename);
-         console.log(coolPath);
-        // await recordAudio(coolPath);
-        const transcription = await transcribeAudio(coolPath);
+        if (!req.files) {
+            return res.status(400).send("No files were uploaded.");
+        }
 
-        console.log("Transcription");
+        const file = req.files?.audioFile;
+        const path = "public" + "/files/" + file.name;
+
+       file.mv(path, (err) => {
+            if (err) {
+                return res.status(500).send(err);
+            }
+           console.log("success",  path );
+        }); 
+        // await recordAudio(path);
+        const transcription = await transcribeAudio(path);
+
         res.send({
             "status": 200,
             "message": transcription

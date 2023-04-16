@@ -22,8 +22,6 @@ export class GrammerCorrectionService {
   }
 
   uploadFile(formData:any){
-    return this.http.post(`${this.apiUrl}audioFile`, {
-      formData
-    });
+    return this.http.post(`${this.apiUrl}speechToText`, formData);
   }
 }

@@ -34,7 +34,8 @@
     "dotenv": "^16.0.3",
     "@ffmpeg-installer/ffmpeg": "1.1.0",
     "mic": "2.1.2",
-    "fluent-ffmpeg":"2.1.2"
+    "fluent-ffmpeg":"2.1.2",
+    "express-fileupload":"1.4.0"
   },
   "author": "mobilerast@gmail.com",
   "license": "ISC",
