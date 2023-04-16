@@ -13,8 +13,7 @@ const openai = new OpenAIApi(configuration);
 // Record audio
 function recordAudio(filename) {
 
-    console.log("transcribeAudio");
-    const coolPath = path.join(__dirname, filename);
+    console.log("recordAudio");
     return new Promise((resolve, reject) => {
         const micInstance = mic({
             rate: "16000",
@@ -23,7 +22,7 @@ function recordAudio(filename) {
         });
 
         const micInputStream = micInstance.getAudioStream();
-        const output = fs.createWriteStream(coolPath);
+        const output = fs.createWriteStream(filename);
         const writable = new Readable().wrap(micInputStream);
 
         console.log("Recording... Press Ctrl+C to stop.");
@@ -48,10 +47,10 @@ function recordAudio(filename) {
 async function transcribeAudio(filename) {
 
     console.log("transcribeAudio");
-    const coolPath = path.join(__dirname, filename);
-
+   
+    console.log(filename);
     const transcript = await openai.createTranscription(
-        fs.createReadStream(coolPath),
+        fs.createReadStream(filename),
         "whisper-1"
     );
 
@@ -63,9 +62,11 @@ async function transcribeAudio(filename) {
 async function main(req, res, next) {
     try {
         const audioFilename = "audio_audio.mp3";
+        const coolPath = path.join('public', audioFilename);
          console.log(audioFilename);
-        // await recordAudio(audioFilename);
-        const transcription = await transcribeAudio(audioFilename);
+         console.log(coolPath);
+        // await recordAudio(coolPath);
+        const transcription = await transcribeAudio(coolPath);
 
         console.log("Transcription");
         res.send({
