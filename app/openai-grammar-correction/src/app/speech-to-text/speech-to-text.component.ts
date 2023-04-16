@@ -27,7 +27,7 @@ constructor(private grammerCorrectionService: GrammerCorrectionService){
 
 
   runAudioFile(){
-    this.grammerCorrectionService.audioTranscibe(this.text).pipe(debounceTime(5000)).subscribe(
+    this.grammerCorrectionService.audioTranscibe("").pipe(debounceTime(5000)).subscribe(
         data => {
             this.standartEnglishText = data;
         }, error => {
