@@ -9,7 +9,7 @@ import { GrammarCorrectionComponent } from './grammar-correction/grammer-correct
 import { UsertabComponent } from './usertab/usertab.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { SpeechToTextComponent } from './speech-to-text/speech-to-text.component';
-import {  ImageVariationComponent } from './image-variation/image-variation.component';
+import {  ImageCreateComponent } from './image-create/image-create.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import {  ImageVariationComponent } from './image-variation/image-variation.comp
     GrammarCorrectionComponent,
     UsertabComponent,
     SpeechToTextComponent,
-    ImageVariationComponent
+    ImageCreateComponent
   ],
   imports: [
     BrowserModule,

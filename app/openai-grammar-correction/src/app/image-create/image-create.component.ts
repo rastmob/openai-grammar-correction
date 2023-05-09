@@ -3,11 +3,11 @@ import { debounceTime } from 'rxjs/operators';
 import { GrammerCorrectionService } from '../grammer-correction.service';
 
 @Component({
-  selector: 'app-image-variation',
-  templateUrl: './image-variation.component.html',
-  styleUrls: ['./image-variation.component.css'],
+  selector: 'app-image-create',
+  templateUrl: './image-create.component.html',
+  styleUrls: ['./image-create.component.css'],
 })
-export class ImageVariationComponent {
+export class ImageCreateComponent {
   fileName: string = '';
   text: string;
   standartEnglishText: any;

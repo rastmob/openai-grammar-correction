@@ -7,28 +7,32 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
+
+// create image by prompt
+async function createImage(prompt,size) {
+
+
+    const transcript = await openai.createImage({
+        prompt: prompt,
+        n: 1,
+        size: size,
+    });
+
+    return transcript.data.text;
+}
+
 // Main function
 async function main(req, res, next) {
     try {
-        if (!req.files) {
-            return res.status(400).send("No files were uploaded.");
-        }
-
-        const file = req.files?.imageFile;
-        const path = "public" + "/files/images/" + file.name;
-
-       file.mv(path, (err) => {
-            if (err) {
-                return res.status(500).send(err);
-            }
-           console.log("success",  path );
-        }); 
+        let prompt = `${req.body.prompt}`;
+        let size = `${req.body.size}`;
+        
         // await recordAudio(path);
-       // const transcription = await transcribeAudio(path);
+        const img = await createImage(prompt,size);
 
         res.send({
             "status": 200,
-            "message": "uploaded"
+            "message": img
         });
     } catch (error) {
         console.log(error);
