@@ -1,0 +1,23 @@
+<h3>Image Variations</h3>
+<p>
+  Get Audio Transcript (Select an audio file and it will upload to the "public" and will sent it to the OPENAI Api to Speech to text)
+</p>
+
+<div class="form-group">
+  <input type="file" class="file-input"
+  class="btn sbmt-btn"
+  (change)="onFileSelected($event)" #fileUpload>
+
+
+<div class="file-upload">
+
+  {{fileName || "No file uploaded yet."}}
+
+   <button  color="primary" class="upload-btn"
+     (click)="fileUpload.click()">
+   </button>
+</div>
+</div>
+
+
+{{ standartEnglishText?.message }}

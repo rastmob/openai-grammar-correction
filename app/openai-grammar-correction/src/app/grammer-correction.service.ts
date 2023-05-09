@@ -24,4 +24,8 @@ export class GrammerCorrectionService {
   uploadFile(formData:any){
     return this.http.post(`${this.apiUrl}speechToText`, formData);
   }
+
+  uploadImg(formData:any){
+    return this.http.post(`${this.apiUrl}image`, formData);
+  }
 }
