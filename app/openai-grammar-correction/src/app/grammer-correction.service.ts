@@ -15,6 +15,14 @@ export class GrammerCorrectionService {
     });
   }
 
+  createImage(text: string) {
+    return this.http.post(`${this.apiUrl}image`, {
+      prompt: text,
+      size: "1024px1024px",
+    });
+  }
+
+
   audioTranscibe(text: string) {
     return this.http.post(`${this.apiUrl}speechToText`, {
       userText: text,
@@ -28,4 +36,6 @@ export class GrammerCorrectionService {
   uploadImg(formData:any){
     return this.http.post(`${this.apiUrl}image`, formData);
   }
+
+  
 }

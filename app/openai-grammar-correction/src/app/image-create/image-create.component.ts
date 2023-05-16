@@ -19,6 +19,16 @@ export class ImageCreateComponent {
 
   ngOnInit() {}
 
+  updateObj() {
+    this.grammerCorrectionService.createImage(this.text).pipe(debounceTime(5000)).subscribe(
+      data => {
+          this.standartEnglishText = data;
+      }, error => {
+        alert(error.error.message);
+      }
+    )
+}
+
   createVariations() {
     this.grammerCorrectionService
       .audioTranscibe('')
