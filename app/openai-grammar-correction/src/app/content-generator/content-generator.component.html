@@ -1,0 +1,48 @@
+<h3>SEO Content Generator</h3>
+
+<div class="row ml-0">
+  <div class="col-6 pr-0">
+    <div class="wrong-text">
+      <div class="form-group">
+        <label for="mainCategory">Choose a Main Category:</label>
+        <select class="form-control" name="mainCategory" id="mainCategory" [(ngModel)]="mainCategory">
+          <option value="İş makinaları">İş makinaları</option>
+          <option value=">Güç sistemleri">Güç sistemleri</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="childCategory">Choose a Child Category:</label>
+        <select class="form-control" name="childCategory" id="childCategory" [(ngModel)]="childCategory">
+          <option value="Kazıcı Yükleyiciler">Kazıcı Yükleyiciler</option>
+          <option value="Lastikli Yükleyiciler">Lastikli Yükleyiciler</option>
+          <option value="Greyderler">Greyderler</option>
+          <option value="Mikro ve Kompakt Paletli Yükleyiciler">Mikro ve Kompakt Paletli Yükleyiciler</option>
+        </select>
+      </div>
+      <div class="form-group">
+       <input type="text" [(ngModel)]="productName" class="form-control" placeholder="Write name of the product">
+      </div>
+      <div class="form-group">
+        <input
+          type="submit"
+          class="btn sbmt-btn"
+          (click)="generateContent()"
+          value="Create Description"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col-6 pl-5">
+    <div class="standart-english">
+      <div class="form-group">
+        <textarea
+          class="form-control"
+          rows="10"
+          placeholder="Standard English"
+          disabled="true"
+          >{{ standartEnglishText.message }}</textarea
+        >
+      </div>
+    </div>
+  </div>
+</div>

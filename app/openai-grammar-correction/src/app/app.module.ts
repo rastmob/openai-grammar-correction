@@ -10,6 +10,7 @@ import { UsertabComponent } from './usertab/usertab.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { SpeechToTextComponent } from './speech-to-text/speech-to-text.component';
 import {  ImageCreateComponent } from './image-create/image-create.component';
+import { ContentGeneratorComponent } from './content-generator/content-generator.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {  ImageCreateComponent } from './image-create/image-create.component';
     GrammarCorrectionComponent,
     UsertabComponent,
     SpeechToTextComponent,
-    ImageCreateComponent
+    ImageCreateComponent,
+    ContentGeneratorComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,14 @@ export class GrammerCorrectionService {
     });
   }
 
+  generateContent(mainCategory: string, childCategory:string, productName:string) {
+    return this.http.post(`${this.apiUrl}generateContent`, {
+      mainCategory: mainCategory,
+      childCategory: childCategory,
+      productName: productName,
+    });
+  }
+
   createImage(text: string) {
     return this.http.post(`${this.apiUrl}image`, {
       prompt: text,
