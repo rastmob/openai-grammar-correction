@@ -10,8 +10,15 @@ const router = express.Router();
 const baseRoute = require('./app/api/router/route.manager')
 
 var port = process.env.PORT || 4011;
-app.use(express.static(path.join(__dirname,'public')));
 
+//Error handling for the dotenv.config()
+try {
+    dotenv.config();
+} catch (error) {
+    console.error("Error loading environment variables:", error);
+}
+
+app.use(express.static(path.join(__dirname,'public')));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
